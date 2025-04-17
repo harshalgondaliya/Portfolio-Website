@@ -2,6 +2,10 @@
 
 Welcome to my personal portfolio website! This repository contains the source code for my professional portfolio website, showcasing my skills, projects, and experience.
 
+## 🌐 Live Demo
+
+Check out the live version of this portfolio at: [https://harshalgondaliya.vercel.app/](https://harshalgondaliya.vercel.app/)
+
 ## 🚀 Features
 
 - Modern and responsive design
@@ -89,9 +93,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 - **Name:** Harshal Gondaliya
-- **Email:** [Your Email]
+- **Email:** harshalgondaliya07@gmail.com
 - **LinkedIn:** [Your LinkedIn Profile]
-- **Portfolio:** [Your Portfolio URL]
+- **Portfolio:** [https://harshalgondaliya.vercel.app/](https://harshalgondaliya.vercel.app/)
 
 ## 🙏 Acknowledgments
 
