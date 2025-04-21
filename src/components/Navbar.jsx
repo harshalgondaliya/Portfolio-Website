@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ const Navbar = () => {
     <nav className="fixed w-full bg-secondary/80 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#" className="text-2xl font-bold text-accent">Portfolio</a>
+          <Link to="/" className="text-2xl font-bold text-accent">Portfolio</Link>
           
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -27,11 +28,11 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-white hover:text-accent transition-colors">Home</a>
-            <a href="#about" className="text-white hover:text-accent transition-colors">About</a>
-            <a href="#skills" className="text-white hover:text-accent transition-colors">Skills</a>
-            <a href="#projects" className="text-white hover:text-accent transition-colors">Projects</a>
-            <a href="#contact" className="text-white hover:text-accent transition-colors">Contact</a>
+            <Link to="/" className="text-white hover:text-accent transition-colors">Home</Link>
+            <Link to="/about" className="text-white hover:text-accent transition-colors">About</Link>
+            <Link to="/skills" className="text-white hover:text-accent transition-colors">Skills</Link>
+            <Link to="/projects" className="text-white hover:text-accent transition-colors">Projects</Link>
+            <Link to="/contact" className="text-white hover:text-accent transition-colors">Contact</Link>
           </div>
         </div>
 
@@ -39,11 +40,11 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block text-white hover:text-accent transition-colors">Home</a>
-              <a href="#about" className="block text-white hover:text-accent transition-colors">About</a>
-              <a href="#skills" className="block text-white hover:text-accent transition-colors">Skills</a>
-              <a href="#projects" className="block text-white hover:text-accent transition-colors">Projects</a>
-              <a href="#contact" className="block text-white hover:text-accent transition-colors">Contact</a>
+              <Link to="/" className="block text-white hover:text-accent transition-colors">Home</Link>
+              <Link to="/about" className="block text-white hover:text-accent transition-colors">About</Link>
+              <Link to="/skills" className="block text-white hover:text-accent transition-colors">Skills</Link>
+              <Link to="/projects" className="block text-white hover:text-accent transition-colors">Projects</Link>
+              <Link to="/contact" className="block text-white hover:text-accent transition-colors">Contact</Link>
             </div>
           </div>
         )}
