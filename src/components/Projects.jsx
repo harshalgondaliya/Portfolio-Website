@@ -138,18 +138,19 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
+    <section id="projects" className="py-12 sm:py-20 px-3 sm:px-6 lg:px-8 min-h-screen">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <br /><br />
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">My Projects</h1>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+        <br />
+        <br />
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">My Projects</h1>
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-2">
             I'm focusing on Artificial Intelligence (AI) and Machine Learning (ML) Development. 💻 Also working on exciting web development 🌐 and AI/ML projects 🤖. Passionate about innovation and always pushing boundaries. 🚀✨ Ready to make an impact! 🔥
           </p>
         </div>
         
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -158,7 +159,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div 
               key={index} 
-              className="bg-secondary rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-secondary rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full"
               variants={itemVariants}
               whileHover="hover"
               custom={cardHoverVariants}
@@ -171,20 +172,20 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-48 sm:h-56 object-cover"
+                    className="w-full h-40 sm:h-48 md:h-56 object-cover object-center"
                   />
                 </a>
               </motion.div>
-              <div className="p-4 sm:p-6">
+              <div className="p-3 sm:p-4 md:p-6 flex flex-col flex-grow">
                 <motion.h2 
-                  className="text-xl sm:text-2xl font-bold mb-3"
+                  className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 line-clamp-2"
                   variants={titleVariants}
                   whileHover="hover"
                 >
                   {project.title}
                 </motion.h2>
                 <motion.p 
-                  className="text-gray-300 mb-4 text-sm sm:text-base"
+                  className="text-gray-300 mb-3 sm:mb-4 text-xs sm:text-sm md:text-base line-clamp-4 sm:line-clamp-5 flex-grow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -192,12 +193,12 @@ const Projects = () => {
                 >
                   {project.description}
                 </motion.p>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <motion.a 
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-accent text-white px-3 sm:px-4 py-2 rounded-md text-sm sm:text-base"
+                    className="bg-accent text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-xs sm:text-sm md:text-base hover:bg-blue-600 transition-colors duration-200"
                     variants={buttonHoverVariants}
                     whileHover="hover"
                     whileTap="tap"
@@ -205,7 +206,7 @@ const Projects = () => {
                     View Github
                   </motion.a>
                   <motion.span 
-                    className="text-2xl"
+                    className="text-xl sm:text-2xl"
                     animate={{ 
                       rotate: [0, 10, -10, 0],
                       scale: [1, 1.1, 1.1, 1]

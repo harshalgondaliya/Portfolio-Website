@@ -79,13 +79,13 @@ const Skills = () => {
     <section 
       id="skills" 
       ref={sectionRef}
-      className="section min-h-screen flex items-center bg-gradient-to-b from-primary to-secondary"
+      className="section min-h-screen flex items-center bg-gradient-to-b from-primary to-secondary py-12 sm:py-20"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 sm:py-17">
-        <div className="text-center mb-8">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-16">
           <br /><br />
-          <h2 className="heading text-4xl font-bold mb-4">Skills & Expertise</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Skills & Expertise</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto px-2">
             Skilled & Passionate Full-Stack Developer with expertise in the MERN Stack. Building dynamic, scalable, and high-performance web applications with modern technologies.
           </p>
         </div>
