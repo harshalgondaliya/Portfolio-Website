@@ -1,11 +1,11 @@
 import { useRef } from 'react';
-import movieImage from '../assets/movie.png'
-import podcastImage from '../assets/Podcast.png'
-import hostImage from '../assets/TooMore.jpg'
-import calculusImage from '../assets/Calculus.png'
-import spamImage from '../assets/Spam.png'
-import plantImage from '../assets/plant.png'
-import sentimentImage from '../assets/sentiment.png'
+import movieImage from '../assets/movie.webp'
+import podcastImage from '../assets/Podcast.webp'
+import hostImage from '../assets/TooMore.webp'
+import calculusImage from '../assets/Calculus.webp'
+import spamImage from '../assets/Spam.webp'
+import plantImage from '../assets/plant.webp'
+import sentimentImage from '../assets/sentiment.webp'
 import { motion } from 'framer-motion'
 
 const Projects = () => {

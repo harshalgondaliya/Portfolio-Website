@@ -1,7 +1,7 @@
 // Import the images directly
-import cloudIcon from '../assets/cloud.png';
+import cloudIcon from '../assets/cloud.webp';
 import githubIcon from '../assets/github.svg';
-import mlIcon from '../assets/ml.png';
+import mlIcon from '../assets/ml.webp';
 import { useEffect, useRef } from 'react';
 import '../styles/Skills.css';
 
