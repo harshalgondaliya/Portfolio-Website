@@ -56,6 +56,7 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
+          <br /><br /><br />
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">My Projects</h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             I'm focusing on Artificial Intelligence (AI) and Machine Learning (ML) Development. 💻 Also working on exciting web development 🌐 and AI/ML projects 🤖. Passionate about innovation and always pushing boundaries. 🚀✨ Ready to make an impact! 🔥

@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed w-full bg-secondary/80 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-accent">Portfolio</Link>
+          <Link to="/" className="text-2xl font-bold text-accent" onClick={handleLinkClick}>Portfolio</Link>
           
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -28,11 +32,11 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-white hover:text-accent transition-colors">Home</Link>
-            <Link to="/about" className="text-white hover:text-accent transition-colors">About</Link>
-            <Link to="/skills" className="text-white hover:text-accent transition-colors">Skills</Link>
-            <Link to="/projects" className="text-white hover:text-accent transition-colors">Projects</Link>
-            <Link to="/contact" className="text-white hover:text-accent transition-colors">Contact</Link>
+            <Link to="/" className="text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Home</Link>
+            <Link to="/about" className="text-white hover:text-accent transition-colors" onClick={handleLinkClick}>About</Link>
+            <Link to="/skills" className="text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Skills</Link>
+            <Link to="/projects" className="text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Projects</Link>
+            <Link to="/contact" className="text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Contact</Link>
           </div>
         </div>
 
@@ -40,11 +44,11 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link to="/" className="block text-white hover:text-accent transition-colors">Home</Link>
-              <Link to="/about" className="block text-white hover:text-accent transition-colors">About</Link>
-              <Link to="/skills" className="block text-white hover:text-accent transition-colors">Skills</Link>
-              <Link to="/projects" className="block text-white hover:text-accent transition-colors">Projects</Link>
-              <Link to="/contact" className="block text-white hover:text-accent transition-colors">Contact</Link>
+              <Link to="/" className="block text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Home</Link>
+              <Link to="/about" className="block text-white hover:text-accent transition-colors" onClick={handleLinkClick}>About</Link>
+              <Link to="/skills" className="block text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Skills</Link>
+              <Link to="/projects" className="block text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Projects</Link>
+              <Link to="/contact" className="block text-white hover:text-accent transition-colors" onClick={handleLinkClick}>Contact</Link>
             </div>
           </div>
         )}

@@ -9,24 +9,26 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section">
-      <div className="container">
-        <h2 className="heading text-center">My Skills</h2>
-        <div className="max-w-3xl mx-auto">
-          {skills.map((skill, index) => (
-            <div key={index} className="mb-8">
-              <div className="flex justify-between mb-2">
-                <span className="text-lg font-medium">{skill.name}</span>
-                <span className="text-accent">{skill.level}%</span>
+    <section id="skills" className="section min-h-screen flex items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="heading text-center mb-16">My Skills</h2>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            {skills.map((skill, index) => (
+              <div key={index} className="mb-8">
+                <div className="flex justify-between mb-3">
+                  <span className="text-lg font-medium">{skill.name}</span>
+                  <span className="text-accent font-semibold">{skill.level}%</span>
+                </div>
+                <div className="h-3 bg-secondary rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-accent rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
               </div>
-              <div className="h-2 bg-secondary rounded-full">
-                <div
-                  className="h-full bg-accent rounded-full transition-all duration-1000"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
