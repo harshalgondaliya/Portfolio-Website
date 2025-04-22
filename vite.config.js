@@ -6,18 +6,15 @@ export default defineConfig({
   plugins: [react()],
   server: {
     historyApiFallback: true,
-    proxy: {
-      '/': {
-        target: 'http://localhost:5173',
-        rewrite: (path) => '/index.html'
-      }
-    }
   },
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       input: {
         main: './index.html',
       },
     },
   },
+  base: './',
 })
