@@ -5,11 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    historyApiFallback: {
-      rewrites: [
-        { from: /^\/.*/, to: '/index.html' }
-      ]
-    },
+    historyApiFallback: true,
+    proxy: {
+      '/': {
+        target: 'http://localhost:5173',
+        rewrite: (path) => '/index.html'
+      }
+    }
   },
   build: {
     rollupOptions: {
