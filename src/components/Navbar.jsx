@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,9 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setIsOpen(false);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <nav className="fixed w-full bg-secondary/80 backdrop-blur-sm z-50">

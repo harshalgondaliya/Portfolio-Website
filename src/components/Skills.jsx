@@ -3,6 +3,7 @@ import cloudIcon from '../assets/cloud.png';
 import githubIcon from '../assets/github.svg';
 import mlIcon from '../assets/ml.png';
 import { useEffect, useRef } from 'react';
+import '../styles/Skills.css';
 
 const skills = {
   ai: [
@@ -51,8 +52,8 @@ const Skills = () => {
         });
       },
       {
-        threshold: 0.5,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
       }
     );
 
@@ -80,8 +81,9 @@ const Skills = () => {
       ref={sectionRef}
       className="section min-h-screen flex items-center bg-gradient-to-b from-primary to-secondary"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 sm:py-17">
+        <div className="text-center mb-8">
+          <br /><br />
           <h2 className="heading text-4xl font-bold mb-4">Skills & Expertise</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Skilled & Passionate Full-Stack Developer with expertise in the MERN Stack. Building dynamic, scalable, and high-performance web applications with modern technologies.
@@ -263,41 +265,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .skill-category.animate {
-          opacity: 1;
-          transform: translateX(0);
-        }
-
-        .skill-card {
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .skill-card:hover {
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .skill-card img {
-          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .skill-card:hover img {
-          transform: scale(1.25);
-        }
-
-        @media (max-width: 768px) {
-          .skill-category {
-            transform: translateY(50px);
-          }
-          
-          .skill-category.animate {
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };
