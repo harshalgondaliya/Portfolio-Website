@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const handleLinkClick = () => {
     setIsOpen(false);
-  };
-  useEffect(() => {
+    // Scroll to top when clicking a navigation link
     window.scrollTo(0, 0);
-  }, []);
+  };
 
   return (
     <nav className="fixed w-full bg-secondary/80 backdrop-blur-sm z-50">
